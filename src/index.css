@@ -5,8 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(51, 101, 79);
 }
-
+textarea{
+  background-color:rgb(228, 228, 83);
+  box-shadow: -4px -3px 4px 4px rgb(103, 184, 228);
+  
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Form from "./components/Form";
+import Preview from "./components/Preview";
 
 function App() {
+  const [text, setText] = useState("Enter Your Text Here");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="mt-5">
+    <div className="App-header">
+      Markdown Previewer
+    </div>
+      <div className=" col-md-6 d-inline-block">
+        <Form text={text} setText={setText}/>
+      </div>
+      <div className="d-inline-block">
+        <Preview text={text} setText={setText} />
+      </div>
     </div>
   );
 }
